@@ -1,0 +1,212 @@
+#recruit {
+  .l-pagetitle {
+    background-image: url(./img/recruit_pagetitle_bg_sp.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include media-up(md) {
+      background-image: url(./img/recruit_pagetitle_bg_pc.jpg);
+    }
+  }
+  .recruit-content {
+    padding: 40px 0 40px;
+    background: $color-gray-ultralight;
+    @include media-up(md) {
+      padding: 120px 0 160px;
+    }
+    .m-sectitle {
+      text-align: center;
+      .m-en--serif {
+        padding-left: 0;
+      }
+    }
+    .recruit-content__lead {
+      margin: 20px 0 10px;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 24px;
+      @include media-up(sm) {
+        text-align: center;
+      }
+      @include media-up(md) {
+        margin: 48px 0;
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+    .recruit-content__gallery {
+      margin: 0 0 32px;
+      display: flex;
+      flex-wrap: wrap;
+      @include media-up(md) {
+        margin: 0 -25px 80px;
+      }
+      .item {
+        width: 100%;
+        max-width: 500px;
+        margin: 10px auto 0;
+        @include media-up(md) {
+          width: 33.3%;
+          max-width: none;
+          margin: 0;
+          padding: 0 25px;
+        }
+      }
+    }
+    .recruit-content__info {
+      padding: 32px 12px;
+      background: $color-white;
+      @include media-up(md) {
+        padding: 80px 48px;
+      }
+      @include media-up(lg) {
+        padding: 100px 88px;
+      }
+      table {
+        width: 100%;
+        th {
+          text-align: left;
+          display: block;
+          width: 100%;
+          padding: 10px;
+          vertical-align: baseline;
+          background: $color-main-bg;
+          @include media-up(md) {
+            display: table-cell;
+            border-bottom: solid 1px $color-gray-ultralight;
+            width: 300px;
+            padding: 40px 0 40px 40px;
+          }
+        }
+        td {
+          display: block;
+          width: 100%;
+          padding: 16px 0;
+          counter-reset: olnum 0;  /* olnum のカウンタを 0 にセット */
+          @include media-up(md) {
+            display: table-cell;
+            border-bottom: solid 1px $color-gray-ultralight;
+            width: calc(100% - 300px);
+            padding: 40px 40px;
+          }
+          ul {
+            li {
+              margin: 4px 0 0;
+              padding-left: 14px;
+              position: relative;
+              &::before {
+                content: "";
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: $color-main;
+                position: absolute;
+                left: 0;
+                top: 8px;
+              }
+              &:first-child {
+                margin: 0;
+              }
+            }
+          }
+          ol {
+            margin-top: 8px;
+            li {
+              margin: 4px 0 0;
+              &:first-child {
+                margin: 0;
+              }
+              &::before {
+                counter-increment: olnum 1;      /* number カウンタの増加数をセット */content: "(" counter(olnum) ") ";      /* 表示形式を指定 */
+              }
+            }
+          }
+          .step {
+            width: 100%;
+            max-width: 280px;
+            @include media-up(md) {
+              width: 250px;
+            }
+            .step-text1 {
+              display: flex;
+              align-items: center;
+              font-size: 14px;
+              &:nth-child(n+2) {
+                margin-top: 8px;
+              }
+              @include media-up(md) {
+                font-size: 16px;
+                &:nth-child(n+2) {
+                  margin-top: 12px;
+                }
+              }
+              span {
+                display: block;
+                font-size: 12px;
+                width: 72px;
+                height: 26px;
+                line-height: 24px;
+                margin-right: 10px;
+                border: solid 1px $color-main;
+                color: $color-main;
+                text-align: center;
+                @include media-up(md) {
+                  font-size: 14px;
+                  height: 35px;
+                  line-height: 33px;
+                  margin-right: 16px;
+                }
+              }
+            }
+            .step-text2 {
+              margin-top: 8px;
+              height: 30px;
+              line-height: 30px;
+              text-align: center;
+              border: solid 1px $color-main;
+              color: $color-main;
+              @include media-up(md) {
+                margin-top: 12px;
+                height: 35px;
+                line-height: 35px;
+              }
+            }
+          }
+        }
+      }
+      .btn {
+        margin-top: 8px;
+        text-align: center;
+        @include media-up(md) {
+          margin-top: 72px;
+        }
+        a {
+          display: block;
+          margin: 0 auto;
+          width: 200px;
+          height: 54px;
+          line-height: 52px;
+          text-align: center;
+          font-size: 16px;
+          letter-spacing: 0.1em;
+          text-indent: 0.1em;
+          color: $color-white;
+          border: solid 1px $color-main;
+          background: $color-main;
+          border-radius: 30px;
+          font-weight: bold;
+          @include media-up(md) {
+            width: 240px;
+            height: 60px;
+            line-height: 58px;
+            font-size: 18px;
+            &:hover {
+              background: $color-white;
+              color: $color-main;
+            }
+          }
+        }
+      }
+    }
+  }
+}

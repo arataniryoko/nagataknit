@@ -1,0 +1,27 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 554px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$container-max-widths: (
+  sm: 554px,
+  md: 720px,
+  lg: 1030px
+) !default;
+
+.row {
+  &.justify-center {
+    justify-content: center;
+  }
+
+  &.justify-between {
+    justify-content: space-between;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+}

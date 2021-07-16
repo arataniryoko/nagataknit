@@ -1,0 +1,132 @@
+
+.page-header {
+  padding: 35px 0;
+  color: $color-white;
+  background: $color-main;
+
+  @include media-up(md) {
+    padding: 54px 0;
+  }
+
+  &__container {
+    text-align: center;
+
+    h1,
+    h2 {
+      font-size: 24px;
+      color: $color-white;
+
+      @include media-up(md) {
+        font-size: 48px;
+      }
+    }
+
+    .en {
+      display: inline-block;
+      padding: 8px 38px;
+      margin: 20px auto 0;
+      font-family: $font-en;
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase;
+      background: #002777;
+      border-radius: 24px;
+    }
+  }
+}
+
+.article {
+  h3 {
+    font-size: 16px;
+    color: $color-main;
+
+    @include media-up(md) {
+      font-size: 30px;
+    }
+  }
+
+  &__container {
+    margin: 18px auto 0;
+
+    @include media-up(md) {
+      margin: 36px auto 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    padding: 16px 16px 16px 0;
+    padding-right: 20px;
+    font-size: 12px;
+    border-bottom: 1px solid $color-main-bg;
+
+    @include media-up(md) {
+      padding: 24px 24px 24px 0;
+      font-size: 14px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      width: 4.72px;
+      height: 9.44px;
+      content: "";
+      background: url(../img/top/news_icon.svg) no-repeat;
+      background-size: cover;
+      transform: translateY(-50%);
+    }
+
+    .date {
+      font-size: 10px;
+      color: #7b7b7b;
+
+      @include media-up(md) {
+        font-size: 14px;
+      }
+    }
+
+    .title {
+      padding-left: 24px;
+
+      @include media-up(md) {
+        padding-left: 48px;
+      }
+    }
+  }
+
+  .more-button {
+    margin-top: 24px;
+  }
+}
+
+.pagination {
+  padding: 40px 0;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    .page-numbers {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      margin: 8px;
+      color: #756d00;
+      text-align: center;
+      border: 1px solid $color-main;
+      border-radius: 18px;
+
+      &.current {
+        color: $color-white;
+        background: $color-main;
+      }
+    }
+  }
+}

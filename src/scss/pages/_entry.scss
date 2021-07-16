@@ -1,0 +1,17 @@
+.entry {
+  .l-pagetitle {
+    background-image: url(./img/entry_pagetitle_bg_sp.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include media-up(md) {
+      background-image: url(./img/entry_pagetitle_bg_pc.jpg);
+    }
+  }
+  .entry-content {
+    padding: 36px 0 40px;
+    @include media-up(md) {
+      padding: 160px 0 112px;
+    }
+  }
+}

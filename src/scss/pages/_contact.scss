@@ -1,0 +1,17 @@
+.contact {
+  .l-pagetitle {
+    background-image: url(./img/contact_pagetitle_bg_sp.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include media-up(md) {
+      background-image: url(./img/contact_pagetitle_bg_pc.jpg);
+    }
+  }
+  .contact-content {
+    padding: 36px 0 40px;
+    @include media-up(md) {
+      padding: 160px 0 112px;
+    }
+  }
+}

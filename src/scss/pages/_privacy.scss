@@ -1,0 +1,46 @@
+#privacy {
+  .l-pagetitle {
+    background-image: url(./img/privacy_pagetitle_bg_sp.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include media-up(md) {
+      background-image: url(./img/privacy_pagetitle_bg_pc.jpg);
+    }
+  }
+  .privacy-content {
+    padding: 40px 0;
+    @include media-up(md) {
+      padding: 140px 0 160px;
+    }
+    .privacy-content__lead {
+      font-size: 12px;
+      line-height: 20px;
+      @include media-up(md) {
+        font-size: 14px;
+        line-height: 30px;
+      }
+    }
+    .privacy-content__block {
+      margin-top: 24px;
+      .title {
+        font-weight: bold;
+        font-size: 14px;
+        @include media-up(md) {
+          font-size: 16px;
+        }
+      }
+      .text {
+        p {
+          margin-top: 12px;
+          font-size: 12px;
+          line-height: 20px;
+          @include media-up(md) {
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}

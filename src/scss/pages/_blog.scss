@@ -1,0 +1,356 @@
+#blog {
+  &.blogdetail {
+    .l-pagetitle {
+      background-image: url(./img/blogdetail_pagetitle_bg_sp.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include media-up(md) {
+        background-image: url(./img/blogdetail_pagetitle_bg_pc.jpg);
+      }
+    }
+  }
+  &.bloglist {
+    .l-pagetitle {
+      background-image: url(./img/bloglist_pagetitle_bg_sp.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include media-up(md) {
+        background-image: url(./img/bloglist_pagetitle_bg_pc.jpg);
+      }
+    }
+  }
+  .bloglist-category {
+    padding: 40px 0 0;
+    @include media-up(md) {
+      padding: 112px 0 0;
+    }
+    .bloglist-category__content {
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 16px;
+      border-bottom: solid 1px $color-gray-ultralight;
+      @include media-up(md) {
+        padding-bottom: 24px;
+      }
+    }
+    .title {
+      font-size: 14px;
+      font-weight: bold;
+      @include media-up(md) {
+        font-size: 16px;
+        width: 120px;
+        padding-top: 8px;
+      }
+    }
+    ul {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      @include media-up(md) {
+        width: calc(100% - 120px);
+      }
+      li {
+        padding: 6px 10px 0 0;
+        @include media-up(md) {
+          padding: 8px 32px 0 0;
+        }
+        a {
+          color: $color-main;
+          text-decoration: underline;
+          @include media-up(md) {
+            &:hover {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+  .bloglist-content {
+    @include media-up(sm) {
+      padding: 8px 0 0;
+    }
+    @include media-up(lg) {
+      padding: 28px 0 0;
+    }
+  }
+  .blogdetail-content {
+    padding: 40px 0 0;
+    @include media-up(md) {
+      padding: 136px 0 0;
+    }
+    .blogdetail-content__head {
+      padding-bottom: 12px;
+      border-bottom: solid 1px $color-gray-ultralight;
+      @include media-up(md) {
+        padding-bottom: 16px;
+      }
+      .info {
+        display: flex;
+        flex-wrap: wrap;
+        .date {
+          padding-top: 4px;
+          font-size: 12px;
+          width: 68px;
+          color: $color-gray;
+          position: relative;
+          &::before {
+            content: "";
+            width: 0;
+            height: 10px;
+            border-left: solid 1px $color-gray-light;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          width: calc(100% - 70px);
+          li {
+            font-size: 12px;
+            color: $color-main;
+            padding: 4px 10px;
+          }
+        }
+      }
+      .title {
+        margin-top: 6px;
+        font-size: 18px;
+        @include media-up(md) {
+          margin-top: 8px;
+          font-size: 24px;
+        }
+      }
+    }
+    .blogdetail-content__body {
+      margin: 16px 0 0;
+      @include media-up(md) {
+        margin: 40px 0 0;
+      }
+      h2 {
+        font-size: 18px;
+        padding-left: 14px;
+        position: relative;
+        &:not(:first-child) {
+          margin-top: 32px;
+        }
+        @include media-up(md) {
+          font-size: 28px;
+          padding-left: 18px;
+          &:not(:first-child) {
+            margin-top: 56px;
+          }
+        }
+        &::before {
+          content: "";
+          height: 85%;
+          width: 4px;
+          border-radius: 5px;
+          background: $color-main;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          @include media-up(md) {
+            height: 80%;
+            width: 5px;
+          }
+        }
+      }
+      h3 {
+        font-size: 16px;
+        font-weight: bold;
+        color: $color-main;
+        &:not(:first-child) {
+          margin-top: 24px;
+        }
+        @include media-up(md) {
+          font-size: 24px;
+          &:not(:first-child) {
+            margin-top: 40px;
+          }
+        }
+      }
+      p {
+        &:not(:first-child) {
+          margin-top: 16px;
+        }
+        @include media-up(md) {
+          &:not(:first-child) {
+            margin-top: 24px;
+          }
+        }
+      }
+      ul {
+        &:not(:first-child) {
+          margin-top: 16px;
+        }
+        @include media-up(md) {
+          padding-left: 32px;
+          &:not(:first-child) {
+            margin-top: 24px;
+          }
+        }
+        li {
+          padding-left: 15px;
+          position: relative;
+          margin: 4px 0;
+          @include media-up(md) {
+            margin: 6px 0;
+          }
+          &::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background: $color-main;
+            position: absolute;
+            left: 0;
+            top: 7px;
+            border-radius: 50%;
+          }
+        }
+      }
+      a {
+        color: $color-main;
+        text-decoration: underline;
+        @include media-up(md) {
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      ol {
+        counter-reset: number 0;           /* number のカウンタを 0 にセット */
+        &:not(:first-child) {
+          margin-top: 16px;
+        }
+        @include media-up(md) {
+          padding-left: 32px;
+          &:not(:first-child) {
+            margin-top: 24px;
+          }
+        }
+        li {
+          padding-left: 1rem;
+          text-indent: -1rem;
+          margin: 4px 0;
+          @include media-up(md) {
+            margin: 6px 0;
+          }
+          &::before {
+            counter-increment: number 1;      /* number カウンタを増加 */
+            content: "" counter(number) ". ";      /* 表示形式を指定 */
+            color: $color-main;
+            font-family: $font-en;
+            font-weight: bold;
+          }
+        }
+      }
+      img {
+        width: auto;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        &:not(:first-child) {
+          margin: 16px auto 0;
+        }
+        @include media-up(md) {
+          margin: 0 auto;
+          &:not(:first-child) {
+            margin: 16px auto 0;
+          }
+        }
+      }
+      blockquote {
+        padding: 32px 18px;
+        background: #FAFAFA;
+        position: relative;
+        margin: 0 auto;
+        &:not(:first-child) {
+          margin: 24px auto 0;
+        }
+        @include media-up(md) {
+          padding: 40px 40px;
+          border-radius: 10px;
+          margin: 0 auto;
+          &:not(:first-child) {
+            margin: 56px auto 0;
+          }
+        }
+        p:first-child {
+          margin: 0;
+        }
+        &::before {
+          content: "“";
+          font-size: 58px;
+          line-height: 1.0;
+          position: absolute;
+          left: 8px;
+          top: 4px;
+          color: $color-main;
+          font-family: $font-serif;
+          @include media-up(md) {
+            font-size: 90px;
+            left: 22px;
+            top: -18px;
+          }
+        }
+        &::after {
+          content: "”";
+          font-size: 58px;
+          line-height: 1.0;
+          position: absolute;
+          right: 8px;
+          bottom: -24px;
+          color: $color-main;
+          font-family: $font-serif;
+          @include media-up(md) {
+            font-size: 90px;
+            right: 24px;
+            bottom: -68px;
+          }
+        }
+      }
+    }
+  }
+  .blogdetail-related {
+    margin: 40px 0 40px;
+    @include media-up(md) {
+      margin: 96px 0 160px;
+    }
+    .blogdetail-related__title {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.0;
+      padding-bottom: 16px;
+      border-bottom: solid 1px $color-gray-ultralight;
+      @include media-up(md) {
+        font-size: 22px;
+        padding-bottom: 24px;
+      }
+    }
+    .l-bloglist {
+
+      @include media-up(md) {
+        margin-top: 40px;
+      }
+      .l-bloglist-item {
+        @include media-up(md) {
+          margin-top: 0;
+        }
+      }
+    }
+    .blogdetail-related__btn {
+      text-align: center;
+      margin-top: 40px;
+      @include media-up(md) {
+        margin-top: 72px;
+      }
+    }
+  }
+}
